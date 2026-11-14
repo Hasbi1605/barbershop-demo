@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<title>BC Admin - Kapster Management</title>
+<!-- Custom fonts for this template-->
+<link href="admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+<!-- Custom styles for this template-->
+<link href="admin/css/sb-admin-2.min.css" rel="stylesheet"/>
+<link href="admin/css/custom-admin.css" rel="stylesheet"/>
+<!-- DataTables CSS -->
+<link href="admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+</head>
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Sidebar - Brand -->
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.html">
+<div class="sidebar-brand-icon rotate-n-15">
+<i class="fas fa-home"></i>
+</div>
+<div class="sidebar-brand-text mx-3">BC Admin</div>
+</a>
+<hr class="sidebar-divider my-0"/>
+<li class="nav-item">
+<a class="nav-link" href="dashboard.html">
+<i class="fas fa-fw fa-chart-line"></i>
+<span>Dashboard Analytics</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="admin.html">
+<i class="fas fa-fw fa-tachometer-alt"></i>
+<span>Point Of Sale (POS)</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="reservations.html">
+<i class="fas fa-calendar-check"></i>
+<span>Reservations</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">
+<i class="fas fa-concierge-bell"></i>
+<span>Services</span>
+</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="kapster.html">
+<i class="fas fa-cut"></i>
+<span>Kapster</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="users.html">
+<i class="fas fa-user"></i>
+<span>User</span>
+</a>
+</li>
+<div class="sidebar-heading">Pages</div>
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fas fa-globe"></i>
+<span>Public</span>
+</a>
+</li>
+<hr class="sidebar-divider d-none d-md-block"/>
+<div class="text-center d-none d-md-inline">
+<button class="rounded-circle border-0" id="sidebarToggle"></button>
+</div>
+</ul>
+<!-- End of Sidebar -->
+<!-- Content Wrapper -->
+<div class="d-flex flex-column" id="content-wrapper">
+<!-- Main Content -->
+<div id="content">
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+<i class="fa fa-bars"></i>
+</button>
+<ul class="navbar-nav ml-auto">
+<div class="topbar-divider d-none d-sm-block"></div>
+<li class="nav-item dropdown no-arrow">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button">
+<span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+<img class="img-profile rounded-circle" src="admin/img/undraw_profile.svg"/>
+</a>
+<div aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+<a class="dropdown-item" href="profile.html">
+<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="login.html">
+<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+</div>
+</li>
+</ul>
+</nav>
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+<!-- Alert Section -->
+<!-- Add / Update -->
+
+<!-- Delete -->
+
+
+<!-- End Alert Section -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+<h1 class="h3 mb-0 text-gray-800">Kapster Management</h1>
+<button class="btn btn-primary btn-icon-split" data-target="#addKapsterModal" data-toggle="modal">
+<span class="icon text-white-50">
+<i class="fas fa-plus"></i>
+</span>
+<span class="text">Add New Kapster</span>
+</button>
+</div>
+<!-- Kapster Table -->
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Kapster List</h6>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table cellspacing="0" class="table table-bordered" id="dataTable" width="100%">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Panca</td>
+<td>821034249</td>
+<td>panca@barbershop.com</td>
+<td>
+<span>ACTIVE</span>
+</td>
+<td>
+<button class="btn btn-sm btn-warning" data-toggle="modal">Edit</button>
+<form action="#" method="get" style="display: inline-block">
+<button class="btn btn-sm btn-danger" type="submit">Delete</button>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
+</div>
+<!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+<!-- Add Kapster Modal-->
+<div aria-hidden="true" class="modal fade" id="addKapsterModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<form action="#" class="needs-validation" method="post" novalidate="">
+<div class="modal-header">
+<h5 class="modal-title">Add New Kapster</h5>
+<button class="close" data-dismiss="modal" type="button">×</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Full Name</label>
+<input class="form-control" name="name" placeholder="Enter full name" required="" type="text"/>
+<div class="invalid-feedback">Nama tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Phone Number</label>
+<input class="form-control" name="phone" placeholder="Enter phone number" required="" type="tel"/>
+<div class="invalid-feedback">Nomor telepon tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Email</label>
+<input class="form-control" name="email" placeholder="kapster@barbershop.com" required="" type="email"/>
+<div class="invalid-feedback">Email tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Status</label>
+<select class="form-control" name="status" required="">
+<option value="">-- Pilih Status --</option>
+<option value="ACTIVE">Active</option>
+<option value="INACTIVE">Inactive</option>
+</select>
+<div class="invalid-feedback">Status harus dipilih</div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+<button class="btn btn-primary" type="submit">Save Kapster</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Edit Kapster Modal -->
+<div class="modal fade" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<form action="#" class="needs-validation" method="post" novalidate="">
+<div class="modal-header">
+<h5 class="modal-title">Edit Kapster</h5>
+<button class="close" data-dismiss="modal" type="button">×</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Full Name</label>
+<input class="form-control" name="name" required="" type="text" value="Panca"/>
+<div class="invalid-feedback">Nama tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Phone Number</label>
+<input class="form-control" name="phone" required="" type="tel" value="821034249"/>
+<div class="invalid-feedback">Nomor telepon tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Email</label>
+<input class="form-control" name="email" required="" type="email" value="panca@barbershop.com"/>
+<div class="invalid-feedback">Email tidak boleh kosong</div>
+</div>
+<div class="form-group">
+<label>Status</label>
+<select class="form-control" name="status" required="">
+<option value="">-- Pilih Status --</option>
+<option selected="selected" value="ACTIVE">Active</option>
+<option value="INACTIVE">Inactive</option>
+</select>
+<div class="invalid-feedback">Status harus dipilih</div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+<button class="btn btn-primary" type="submit">Update Kapster</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script src="admin/vendor/jquery/jquery.min.js"></script>
+<script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="admin/js/sb-admin-2.min.js"></script>
+<script src="admin/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="admin/js/handler/alert-handler.js"></script>
+<script src="admin/js/validation/kapster-validation.js"></script>
+<script src="demo.js"></script></body>
+</html>
