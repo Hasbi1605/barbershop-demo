@@ -1,0 +1,111 @@
+:root {
+  --primary: #eb1616;
+  --secondary: #191c24;
+  --light: #6c7293;
+  --dark: #000000;
+}
+
+/* Sidebar Background */
+.bg-gradient-primary {
+  background-color: var(--secondary) !important;
+  background-image: linear-gradient(180deg, var(--secondary) 10%, #222 100%) !important;
+  background-size: cover;
+}
+
+/* Text Primary Color */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+/* Button Primary */
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: #c91313 !important;
+  border-color: #c91313 !important;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(235, 22, 22, 0.5) !important;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #c91313 !important;
+  border-color: #c91313 !important;
+}
+
+/* Pagination */
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: #c91313;
+  text-decoration: none;
+}
+
+/* Sidebar Links */
+.sidebar-dark .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-dark .nav-item .nav-link:hover {
+  color: #fff;
+}
+
+.sidebar-dark .nav-item.active .nav-link {
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-dark .nav-item .nav-link:hover i {
+  color: #fff;
+}
+
+.sidebar-dark .nav-item.active .nav-link i {
+  color: #fff;
+}
+
+/* Sidebar Brand */
+.sidebar-brand-icon i,
+.sidebar-brand-text {
+  color: var(--primary) !important;
+}
+
+/* Topbar */
+.topbar .nav-item .nav-link {
+  color: var(--secondary);
+}
+
+.topbar .nav-item .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Dropdown Items */
+.dropdown-item:active {
+  background-color: var(--primary);
+}
